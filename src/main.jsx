@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Login from './Components/Login/Login.jsx'
 import Registration from './Components/Registration/Registration.jsx'
@@ -7,6 +6,9 @@ import Home from './Components/Home/Home.jsx'
 import Main from './Components/RootPage/Main.jsx'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Authprovider from './provider/Authprovider.jsx'
+import Dashboard from './Components/RootPage/Dashboard.jsx'
+import PrivateRoute from './Components/RootPage/PrivateRoute.jsx'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +27,18 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: 'dashboard',
+    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      // normal user routes
+      {
+        path: 'userhome',
+        element: <Home></Home>
+      },
+    ]
+  }
+
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Authprovider>
