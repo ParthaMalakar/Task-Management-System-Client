@@ -1,4 +1,4 @@
-import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaMarkdown, FaSearch, FaShoppingCart, FaStreetView, FaUsers, FaUtensils } from "react-icons/fa";
+import { FaAd, FaBook, FaCalendar, FaEnvelope, FaHome, FaList, FaMarkdown, FaSearch, FaShoppingCart, FaStreetView, FaTasks, FaUsers, FaUtensils } from "react-icons/fa";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
 import { MdOutlineClearAll } from "react-icons/md";
@@ -35,31 +35,16 @@ const Dashboard = () => {
                            
                             <>
                                 <li>
-                                    <NavLink className=" text-lg" to="/dashboard/adminHome">
-                                        <FaHome></FaHome>
-                                        Admin Home</NavLink>
+                                    <NavLink className=" text-lg" to="/dashboard/tasks">
+                                        <FaTasks></FaTasks>
+                                        Create new tasks</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink className=" text-lg" to="/dashboard/allparcel">
+                                    <NavLink className=" text-lg" to="/dashboard/all">
                                        <MdOutlineClearAll></MdOutlineClearAll>
-                                        All Parcels</NavLink>
+                                        All Tasks</NavLink>
                                 </li>
-                                <li>
-                                    <NavLink className=" text-lg" to="/dashboard/alluser">
-                                    <FaUsers></FaUsers>
-                                        All Users</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink className="text-lg" to="/dashboard/alldelavery">
-                                    <FaUsers></FaUsers>
-                                        All Delivery Men</NavLink>
-                                </li>
-                                <li>
-                                    <NavLink 
-                                     className=" text-lg" to="/dashboard/statistics">
-                                        <TbPlaystationSquare></TbPlaystationSquare>
-                                        Statistics</NavLink>
-                                </li>
+                              
                             </>
 
                         }

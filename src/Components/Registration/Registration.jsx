@@ -57,7 +57,7 @@ const Registration = () => {
                 const user = result.user;
                 const Myorder = [];
                 const userdata = { email, Myorder: Myorder };
-                fetch('https://restaurant-management-server-six.vercel.app/user', {
+                fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -8,6 +8,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Authprovider from './provider/Authprovider.jsx'
 import Dashboard from './Components/RootPage/Dashboard.jsx'
 import PrivateRoute from './Components/RootPage/PrivateRoute.jsx'
+import Alltasks from './Components/Alltasks/Alltasks.jsx'
+import CreateTask from './Components/CreateTask/CreateTask.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,9 +35,12 @@ const router = createBrowserRouter([
     children: [
       // normal user routes
       {
-        path: 'userhome',
-        element: <Home></Home>
-      },
+        path: 'all',
+        element: <Alltasks></Alltasks>
+      },{
+        path:'tasks',
+        element:<CreateTask></CreateTask>
+      }
     ]
   }
 
