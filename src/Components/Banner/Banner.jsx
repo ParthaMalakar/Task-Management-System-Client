@@ -41,7 +41,7 @@ const Banner = () => {
         <h3 className="text-4xl text-white font-bold">Unlock Productivity, Simplify Collaboration</h3>
         <p className='text-white p-1'>Welcome to TaskFlow Pro, where seamless task management meets collaborative efficiency. Empower your team, streamline your workflow, and achieve more together. Let's explore the future of productivity!</p>
     
-    <button className="btn"> <a href="Partha Malakar(Resume_).pdf" download="">Let’s Explore</a> </button>
+    <Link to={'/login'} className="btn"> <a  download="">Let’s Explore</a> </Link>
         </div>
         <div>
         <img className='h-[250px] ml-24 md:ml-0 mt-10 md:mt-0 md:h-[300px]  md:rounded-full ' src="https://i.ibb.co/kGpVbGr/8431438-3902303.jpg" alt="" />

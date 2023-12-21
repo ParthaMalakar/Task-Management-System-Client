@@ -23,7 +23,7 @@ const UserBenefitsSection = () => {
   ];
 
   return (
-    <section className="user-benefits-section max-w-6xl mx-auto">
+    <section className="user-benefits-section max-w-6xl mx-auto mb-4">
       <h2 className='text-center mt-9 font-bold text-3xl'>Who Can Benefit from TaskFlow Pro?</h2>
       <div className="user-categories grid grid-cols-1 md:grid-cols-3 gap-7 mt-8">
         {userCategories.map((category, index) => (
