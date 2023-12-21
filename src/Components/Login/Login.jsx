@@ -14,10 +14,10 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 if(result.user){
-                    const myOrder = [];
+                    
 const e = result.user.email
-                const userdata = { email:e, Myorder: myOrder };
-                fetch('https://restaurant-management-server-six.vercel.app/user', {
+                const userdata = { email:e };
+                fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -65,7 +65,7 @@ const e = result.user.email
             .then(result => {
                 console.log(result.user);
                 // const myorder = [];
-                const userdata = { email, Myorder: myorder };
+                const userdata = { email };
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
