@@ -13,6 +13,7 @@ import CreateTask from './Components/CreateTask/CreateTask.jsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import Update from './Components/Update/Update.jsx'
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
@@ -29,7 +30,12 @@ const router = createBrowserRouter([
       },{
         path:'/register',
         element:<Registration></Registration>
-      }
+      },
+      {
+        path: '/update/:id',
+        element: <PrivateRoute><Update></Update></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/Details/${params.id}`)
+    },
     ],
   },
   {
@@ -43,7 +49,8 @@ const router = createBrowserRouter([
       },{
         path:'tasks',
         element:<CreateTask></CreateTask>
-      }
+      },
+
     ]
   }
 
