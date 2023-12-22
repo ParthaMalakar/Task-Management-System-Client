@@ -80,7 +80,7 @@ const CreateTask = () => {
                             <span className="label-text">priority</span>
                         </label>
                         <select  placeholder="priority"
-                            {...register('ReceiverName', { required: true })}
+                            {...register('priority', { required: true })}
                             required
                             className="rounded-lg p-3 input-bordered w-full">
                             <option value="low">Low</option>

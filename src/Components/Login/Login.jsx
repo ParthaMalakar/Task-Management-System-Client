@@ -37,8 +37,8 @@ const e = result.user.email
                       )
                 }
                
-                
-                navigate(location?.state ? location.state : '/');
+                console.log(location.state)
+                navigate(location?.state ? '/dashboard' : '/');
 
             })
             .catch(error => {
@@ -86,7 +86,7 @@ const e = result.user.email
                   )
                 // navigate after login
                 e.target.reset();
-                navigate(location?.state ? location.state : '/');
+                navigate(location?.state ? '/dashboard' : '/');
 
             })
             .catch(error => {
